@@ -5,17 +5,17 @@
     public class Car : IVehicle
     {
         private readonly string name;
-        private readonly decimal speed;
+        private readonly IEngine engine;
 
-        public Car(string name, decimal speed)
+        public Car(string name, IEngine engine)
         {
             this.name = name;
-            this.speed = speed;
+            this.engine = engine;
         }
 
         public string SpeedUp()
         {
-            return name + ": speed up " + speed + " km/h";
+            return name + ": speed up " + engine.GetSpeed() + " km/h";
         }
     }
 }

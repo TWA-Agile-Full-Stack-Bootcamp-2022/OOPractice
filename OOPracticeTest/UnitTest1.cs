@@ -10,7 +10,7 @@ namespace OOPracticeTest
         [Fact]
         public void Should_show_message_when_speedup_given_a_car()
         {
-            Car car = new Car("Cool Car", 30);
+            Car car = new Car("Cool Car", new GasolineEngine());
             string message = car.SpeedUp();
             Assert.Equal("Cool Car: speed up 30 km/h", message);
         }
@@ -27,7 +27,7 @@ namespace OOPracticeTest
         public void Should_show_message_when_Driver_drive_given_a_car()
         {
             Driver driver = new Driver();
-            string message = driver.Drive(new Car("Cool Car", 30));
+            string message = driver.Drive(new Car("Cool Car", new GasolineEngine()));
             Assert.Equal("Cool Car: speed up 30 km/h", message);
         }
 
@@ -37,6 +37,22 @@ namespace OOPracticeTest
             Driver driver = new Driver();
             string message = driver.Drive(new Truck("Big Truck", 10));
             Assert.Equal("Big Truck: speed up 10 km/h", message);
+        }
+
+        [Fact]
+        public void Should_show_message_when_speedup_given_a_car_with_gasoline_engine()
+        {
+            Car car = new Car("Cool Car", new GasolineEngine());
+            string message = car.SpeedUp();
+            Assert.Equal("Cool Car: speed up 30 km/h", message);
+        }
+
+        [Fact]
+        public void Should_show_message_when_speedup_given_a_car_with_electric_engine()
+        {
+            Car car = new Car("Cool Car", new ElectricEngine());
+            string message = car.SpeedUp();
+            Assert.Equal("Cool Car: speed up 25 km/h", message);
         }
     }
 }
