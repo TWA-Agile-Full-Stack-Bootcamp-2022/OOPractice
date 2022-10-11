@@ -35,6 +35,18 @@ namespace OOPracticeTest
                 //then
                 Assert.Equal("Big Truck: speed up 10 km/h", show);
             }
+
+            [Fact]
+            public void Should_return_name_and_speed_when_driver_diver_car_given_car_with_name_Cool_Car_and_speed_250()
+            {
+                //given
+                var car = new Car("Cool Car", 30);
+                var driver = new Driver();
+                //when
+                var show = driver.Drive(car);
+                //then
+                Assert.Equal("Cool Car: speed up 30 km/h", show);
+            }
         }
     }
 }
