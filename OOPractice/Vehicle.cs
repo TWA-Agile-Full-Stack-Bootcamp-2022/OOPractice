@@ -1,7 +1,12 @@
 namespace OOPractice
 {
-    public interface Vehicle
+    public abstract class Vehicle
     {
-        public string Speedup();
+        protected string name;
+        protected int speed;
+        public string Speedup()
+        {
+            return this.name + ": speed up " + this.speed + " km/h";
+        }
     }
 }

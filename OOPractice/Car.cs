@@ -2,9 +2,6 @@ namespace OOPractice
 {
     public class Car : Vehicle
     {
-        private string name;
-        private int speed;
-
         public Car(string name, int speed)
         {
             this.name = name;

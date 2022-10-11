@@ -1,21 +1,21 @@
-using System.Collections.Generic;
-
 namespace OOPractice
 {
     public class Truck : Vehicle
     {
-        private string name;
-        private int speed;
-
         public Truck(string name, int speed)
         {
             this.name = name;
+
             this.speed = speed;
         }
 
-        public string Speedup()
+        public Truck(string name, Engine engine)
         {
-            return this.name + ": speed up " + this.speed + " km/h";
+            this.name = name;
+            if (engine.GetEngineType() == EngineType.Gasoline)
+            {
+                this.speed = 30;
+            }
         }
     }
 }
