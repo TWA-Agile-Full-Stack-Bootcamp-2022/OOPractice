@@ -2,9 +2,9 @@
 {
     public class Driver
     {
-        public string Drive(Car car)
+        public string Drive(IVehicle vehicle)
         {
-            return car.SpeedUp();
+            return vehicle.SpeedUp();
         }
     }
 }

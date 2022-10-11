@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Truck
+    public class Truck : IVehicle
     {
         private readonly string name;
         private readonly decimal speed;
