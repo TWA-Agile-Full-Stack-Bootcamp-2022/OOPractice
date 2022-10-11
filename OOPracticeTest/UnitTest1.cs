@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace OOPracticeTest
 {
     using OOPractice;
@@ -6,10 +8,11 @@ namespace OOPracticeTest
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void Should_show_message_when_speedup_given_a_car()
         {
-            var class1 = new Class1();
-            Assert.NotNull(class1);
+            Car car = new Car("Cool Car", 30);
+            string message = car.SpeedUp();
+            Assert.Equal("Cool Car: speed up 30 km/h", message);
         }
     }
 }
