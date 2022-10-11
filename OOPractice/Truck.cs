@@ -16,6 +16,11 @@ namespace OOPractice
             {
                 this.speed = 30;
             }
+
+            if (engine.GetEngineType() == EngineType.Electric)
+            {
+                this.speed = 25;
+            }
         }
     }
 }

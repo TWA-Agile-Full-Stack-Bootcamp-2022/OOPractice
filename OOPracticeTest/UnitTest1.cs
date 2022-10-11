@@ -72,6 +72,19 @@ namespace OOPracticeTest
                 //then
                 Assert.Equal("Big Truck: speed up 30 km/h", show);
             }
+
+            [Fact]
+            public void Should_return_name_and_speed_25_when_driver_diver_vehicle_given_vehicle_with_electric_engine()
+            {
+                //given
+                var engine = new Engine(EngineType.Electric);
+                var truck = new Truck("Big Truck", engine);
+                var driver = new Driver();
+                //when
+                var show = driver.Drive(truck);
+                //then
+                Assert.Equal("Big Truck: speed up 25 km/h", show);
+            }
         }
     }
 }
