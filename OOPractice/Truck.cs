@@ -1,11 +1,13 @@
+using System.Collections.Generic;
+
 namespace OOPractice
 {
-    public class Car
+    public class Truck
     {
         private string name;
         private int speed;
 
-        public Car(string name, int speed)
+        public Truck(string name, int speed)
         {
             this.name = name;
             this.speed = speed;
