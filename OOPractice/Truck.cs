@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace OOPractice
 {
-    public class Truck
+    public class Truck : Vehicle
     {
         private string name;
         private int speed;

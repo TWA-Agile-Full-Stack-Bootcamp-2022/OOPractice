@@ -2,14 +2,9 @@ namespace OOPractice
 {
     public class Driver
     {
-        public string Drive(Car car)
+        public string Drive(Vehicle vehicle)
         {
-            return car.Speedup();
-        }
-
-        public string Drive(Truck truck)
-        {
-            return truck.Speedup();
+            return vehicle.Speedup();
         }
     }
 }
