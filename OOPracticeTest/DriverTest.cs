@@ -24,5 +24,15 @@ namespace OOPracticeTest
 
             Assert.Equal("Big Truck: speed up 10 km/h", message);
         }
+
+        [Fact]
+        public void Should_show_speed_up_message_when_driver_drive_a_car_given_car_engine_is_electric()
+        {
+            IVehicle car = new Car(CarEngine.ELECTRIC);
+
+            var message = Driver.Drive(car);
+
+            Assert.Equal("Cool Car: speed up 25 km/h", message);
+        }
     }
 }

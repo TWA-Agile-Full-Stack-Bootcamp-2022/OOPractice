@@ -4,10 +4,10 @@ namespace OOPractice
 {
     public class Car : IVehicle
     {
-        public Car()
+        public Car(CarEngine carEngine = CarEngine.GASOLINE)
         {
             Name = "Cool Car";
-            Speed = 30;
+            Speed = carEngine.Equals(CarEngine.ELECTRIC) ? 25 : 30;
         }
 
         public string Name { get; set; }
