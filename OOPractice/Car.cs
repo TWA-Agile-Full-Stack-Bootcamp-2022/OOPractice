@@ -1,13 +1,17 @@
+using System.Collections.Generic;
+
 namespace OOPractice
 {
-    public class Car
+    public class Car : IVehicle
     {
-        private const string Name = "Cool Car";
-        private const int Speed = 30;
-
-        public string SpeedUp()
+        public Car()
         {
-            return $"{Name}: speed up {Speed} km/h";
+            Name = "Cool Car";
+            Speed = 30;
         }
+
+        public string Name { get; set; }
+
+        public int Speed { get; set; }
     }
 }

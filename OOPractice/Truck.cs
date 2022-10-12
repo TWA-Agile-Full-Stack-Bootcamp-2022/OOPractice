@@ -1,13 +1,15 @@
 namespace OOPractice
 {
-    public class Truck
+    public class Truck : IVehicle
     {
-        private const string Name = "Big Truck";
-        private const int Speed = 10;
-
-        public string SpeedUp()
+        public Truck()
         {
-            return $"{Name}: speed up {Speed} km/h";
+            Name = "Big Truck";
+            Speed = 10;
         }
+
+        public string Name { get; set; }
+
+        public int Speed { get; set; }
     }
 }
