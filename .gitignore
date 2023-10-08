@@ -8,3 +8,6 @@
 /OOPracticeTest/bin
 /OOPracticeTest/obj
 .idea
+
+/coveragereport
+TestResults
