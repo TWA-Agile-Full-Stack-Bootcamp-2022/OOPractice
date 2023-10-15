@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOPractice
+﻿namespace OOPractice
 {
-    public class Truck
+    public class Truck : Vehicle
     {
         public Truck(string name)
         {
@@ -15,7 +9,7 @@ namespace OOPractice
 
         public string Name { get; set; }
 
-        public string ShowMessage()
+        public override string ShowMessage()
         {
             return "Big Truck: speed up 10 km/h";
         }

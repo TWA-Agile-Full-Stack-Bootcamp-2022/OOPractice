@@ -1,6 +1,6 @@
 ﻿namespace OOPractice
 {
-    public class Car
+    public class Car : Vehicle
     {
         public Car(string name)
         {
@@ -9,7 +9,7 @@
 
         public string Name { get; set; }
 
-        public string ShowMessage()
+        public override string ShowMessage()
         {
             return "Cool Car: speed up 30 km/h";
         }
