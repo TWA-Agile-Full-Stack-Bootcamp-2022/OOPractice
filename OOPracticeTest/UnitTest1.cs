@@ -22,5 +22,13 @@ namespace OOPracticeTest
             //then
             Assert.Equal("Cool Car: speed up 30 km/h", actual);
         }
+
+        [Fact]
+        public void Should_return_name_and_speed_when_speedup_given_truck_name_and_speed()
+        {
+            var truck = new Truck("Big Truck", 20);
+            var actual = truck.Speedup();
+            Assert.Equal("Big Truck: speed up 20 km/h", actual);
+        }
     }
 }
