@@ -50,5 +50,41 @@ namespace OOPracticeTest
 
             Assert.Equal("Big Truck: speed up 20 km/h", actual);
         }
+
+        [Fact]
+        public void Should_return_name_and_speed_when_Car_engine_is_GAS()
+        {
+            var car = new Car("Cool Car", Engine.GAS);
+            var actual = car.Speedup();
+
+            Assert.Equal("Cool Car: speed up 30 km/h", actual);
+        }
+
+        [Fact]
+        public void Should_return_name_and_speed_when_Car_engine_is_ELECTRIC()
+        {
+            var car = new Car("Cool Car", Engine.ELECTRIC);
+            var actual = car.Speedup();
+
+            Assert.Equal("Cool Car: speed up 25 km/h", actual);
+        }
+
+        [Fact]
+        public void Should_return_name_and_speed_when_Truck_engine_is_GAS()
+        {
+            var truck = new Truck("Big Truck", Engine.GAS);
+            var actual = truck.Speedup();
+
+            Assert.Equal("Big Truck: speed up 30 km/h", actual);
+        }
+
+        [Fact]
+        public void Should_return_name_and_speed_when_Truck_engine_is_ELECTRIC()
+        {
+            var truck = new Truck("Big Truck", Engine.ELECTRIC);
+            var actual = truck.Speedup();
+
+            Assert.Equal("Big Truck: speed up 25 km/h", actual);
+        }
     }
 }

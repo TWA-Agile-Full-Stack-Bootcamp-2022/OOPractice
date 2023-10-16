@@ -5,5 +5,9 @@ namespace OOPractice
         public Truck(string name, int speed) : base(name, speed)
         {
         }
+
+        public Truck(string name, Engine engine) : base(name, engine)
+        {
+        }
     }
 }
