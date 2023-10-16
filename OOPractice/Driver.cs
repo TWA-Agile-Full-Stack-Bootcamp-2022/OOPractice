@@ -6,5 +6,10 @@ namespace OOPractice
         {
             return car.Speedup();
         }
+
+        public string Drive(Truck truck)
+        {
+            return truck.Speedup();
+        }
     }
 }
