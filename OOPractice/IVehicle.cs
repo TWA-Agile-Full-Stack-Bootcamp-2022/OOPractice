@@ -1,11 +1,12 @@
 ﻿namespace OOPractice
 {
     using System;
-    public class Vehicle
+    public interface IVehicle
     {
+        public abstract string Speedup();
     }
 
-    public class Car
+    public class Car : IVehicle
     {
         public string Speedup()
         {
@@ -13,11 +14,19 @@
         }
     }
 
-    public class Truck
+    public class Truck : IVehicle
     {
         public string Speedup()
         {
             return "Big Truck:speed up 10km/h";
+        }
+    }
+
+    public class Driver
+    {
+        public string Drive(IVehicle vehicle)
+        {
+            return vehicle.Speedup();
         }
     }
 }

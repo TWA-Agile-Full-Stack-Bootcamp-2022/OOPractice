@@ -24,4 +24,15 @@ namespace OOPracticeTest
             Assert.Equal("Big Truck:speed up 10km/h", truck.Speedup());
         }
     }
+
+    public class DriverTest
+    {
+        [Fact]
+        public void Should_show_different_msg_when_drive_can_and_truck()
+        {
+            var driver = new Driver();
+            Assert.Equal("Cool Car: speed up 30 km/h", driver.Drive(new Car()));
+            Assert.Equal("Big Truck:speed up 10km/h", driver.Drive(new Truck()));
+        }
+    }
 }
