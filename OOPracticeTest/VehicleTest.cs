@@ -1,5 +1,6 @@
 namespace OOPracticeTest
 {
+    using Newtonsoft.Json.Linq;
     using OOPractice;
     using System;
     using Xunit;
@@ -12,6 +13,13 @@ namespace OOPracticeTest
             Car car = new Car();
             string value = car.Speedup();
             Assert.Equal("Cool Car: speed up 30 km/h", value);
+        }
+
+        [Fact]
+        public void Should_be_25_when_with_elecEngine()
+        {
+            Car car = new Car(new ElectricEngine());
+            Assert.Equal("Cool Car: speed up 25 km/h", car.Speedup());
         }
     }
 
